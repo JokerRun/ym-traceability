@@ -13,5 +13,11 @@
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://machine001:63306</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="trace@gateway002" uuid="9885240f-d805-4fd8-93a0-4038d5d39e0a">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://gateway002:14330</jdbc-url>
+    </data-source>
   </component>
 </project>
