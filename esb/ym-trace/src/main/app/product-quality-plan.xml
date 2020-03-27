@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:jdbc="http://www.mulesoft.org/schema/mule/jdbc" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/jdbc http://www.mulesoft.org/schema/mule/jdbc/current/mule-jdbc.xsd">
+    <db:generic-config name="ym-mssql" url="${db.url}" driverClassName="${db.driver.class}" doc:name="Generic Database Configuration"/>
+    <db:template-query name="get_quality_plan.sql" doc:name="Template Query">
+        <db:parameterized-query file="sql/get_quality_plan.sql"/>
+        <db:in-param name="billNo" type="NVARCHAR" defaultValue="#[payload]"/>
+    </db:template-query>
+    <sub-flow name="get:/getProductQualityPlanBySaleOrder">
+        <set-payload value="#[message.inboundProperties.'http.query.params'.orderId]" doc:name="Set Payload"/>
+        <db:select config-ref="ym-mssql" doc:name="Database">
+            <db:template-query-ref name="get_quality_plan.sql"/>
+        </db:select>
+    </sub-flow>
+</mule>

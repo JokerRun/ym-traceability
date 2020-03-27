@@ -2,6 +2,9 @@
 <module type="DBE_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$/docs/K3_ERP/00.kingdee_doc" />
+    <content url="file://$MODULE_DIR$/ym/lab" />
+    <content url="file://$MODULE_DIR$/ym/关系梳理" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
