@@ -1,1 +1,0 @@
-select * from dbo.t_BOS200000027;
