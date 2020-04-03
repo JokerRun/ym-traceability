@@ -5,7 +5,7 @@
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://machine001:61433</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://47.96.114.97:61433</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="qms@machine001" uuid="e099125c-e7a0-4328-b020-451cb56b7111">
       <driver-ref>mysql</driver-ref>
@@ -17,7 +17,7 @@
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://gateway002:14330</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://47.97.109.43:14330</jdbc-url>
     </data-source>
   </component>
 </project>
