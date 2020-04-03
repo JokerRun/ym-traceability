@@ -26,30 +26,5 @@ select FID,
        FInteger
 from dbo.t_BOS200000027;
 
-select FID,
-       FClassTypeID,
-       FBillNo,
-       FBase,
-       FText,
-       FBase1,
-       FText1,
-       FDate,
-       FDate1,
-       FBiller,
-       FTime,
-       FUser,
-       FTime1,
-       FText3,
-       FDate2,
-       FID_SRC,
-       FEntryID_SRC,
-       FBillNo_SRC,
-       FClassID_SRC,
-       FBase2,
-       FBase3,
-       FText8,
-       FBase4,
-       FMultiCheckStatus,
-       FText2,
-       FInteger
+select count(*)
 from dbo.t_BOS200000027;
