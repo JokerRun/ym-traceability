@@ -1,28 +1,224 @@
 {
 	"info": {
-		"_postman_id": "d50dc057-d3ec-4047-be1c-81f36e35d05f",
+		"_postman_id": "63166358-af0f-4c5d-982f-f080f64df841",
 		"name": "Y9",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "采购单",
+			"name": "销售订单视图",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}?cmd=login123",
+					"raw": "{{baseUrl}}?cmd=api56584&dateStart=2018-01-01&dateEnd=2099-01-01",
 					"host": [
 						"{{baseUrl}}"
 					],
 					"query": [
 						{
 							"key": "cmd",
-							"value": "login123"
+							"value": "api56584"
+						},
+						{
+							"key": "dateStart",
+							"value": "2018-01-01"
+						},
+						{
+							"key": "dateEnd",
+							"value": "2099-01-01"
 						}
 					]
 				},
 				"description": "http://machine001:11180/PCodeClient/api.ashx?cmd=login123"
+			},
+			"response": []
+		},
+		{
+			"name": "生产任务单",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}?cmd=api56584&dateStart=2018-01-01&dateEnd=2099-01-01",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"query": [
+						{
+							"key": "cmd",
+							"value": "api56584"
+						},
+						{
+							"key": "dateStart",
+							"value": "2018-01-01"
+						},
+						{
+							"key": "dateEnd",
+							"value": "2099-01-01"
+						}
+					]
+				},
+				"description": "http://machine001:11180/PCodeClient/api.ashx?cmd=login123"
+			},
+			"response": []
+		},
+		{
+			"name": "产品质量计划",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}?cmd=api56612",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"query": [
+						{
+							"key": "cmd",
+							"value": "api56612"
+						}
+					]
+				},
+				"description": "http://machine001:11180/PCodeClient/api.ashx?cmd=login123"
+			},
+			"response": []
+		},
+		{
+			"name": "count sale order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}?cmd=api56612",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"query": [
+						{
+							"key": "cmd",
+							"value": "api56612"
+						}
+					]
+				},
+				"description": "http://machine001:11180/PCodeClient/api.ashx?cmd=login123"
+			},
+			"response": []
+		},
+		{
+			"name": "销售订单产品质量计划",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}?cmd=api56613&dateStart=2019-10-10&dateEnd=2019-10-20",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"query": [
+						{
+							"key": "cmd",
+							"value": "api56613"
+						},
+						{
+							"key": "dateStart",
+							"value": "2019-10-10"
+						},
+						{
+							"key": "dateEnd",
+							"value": "2019-10-20"
+						}
+					]
+				},
+				"description": "http://machine001:11180/PCodeClient/api.ashx?cmd=login123"
+			},
+			"response": []
+		},
+		{
+			"name": "获取委托测试单",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取委托测试单明细实体",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取流转卡",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取上料明细",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取SeOrder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取OrderEntry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取ITCem",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
 			},
 			"response": []
 		}
