@@ -16,3 +16,18 @@ version: 1.0
       '200':
         body:
           application/json:
+
+/queryQualityInfo:
+  get:
+    queryParameters:
+      billno:
+        type: string
+        example: 'XSDD2018051618968'
+      name?:
+        type: string
+        example: 'LR6铝膜斯高2缩装'
+    responses:
+      200:
+        body:
+          application/json:   
+        
