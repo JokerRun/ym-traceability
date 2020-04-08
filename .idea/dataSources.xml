@@ -19,5 +19,11 @@
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
       <jdbc-url>jdbc:sqlserver://47.97.109.43:14330</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="trace@inner" uuid="2f3bac81-ca63-43a2-8837-f3c6892250b3">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://machine001:51433</jdbc-url>
+    </data-source>
   </component>
 </project>
