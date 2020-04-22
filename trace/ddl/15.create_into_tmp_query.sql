@@ -6,7 +6,7 @@ select c.FName customerName,
        cte.ftext4 ftext4,
        cte.ftext5 ftext5,
        Cast(Convert(decimal(18,2),cte.fdecimal) as nvarchar)+'V' fdecimal,
-       fdsc.capacity1,fdsc.capacity2,fdsc.capacity3,fdsc.capacity4,fdsc.capacity5,fdsc.capacity6,,fdsc.capacity7,fdsc.capacity8,fdsc.capacity9
+       fdsc.capacity1,fdsc.capacity2,fdsc.capacity3,fdsc.capacity4,fdsc.capacity5,fdsc.capacity6,fdsc.capacity7,fdsc.capacity8,fdsc.capacity9
 into tmp_Query
 from SEOrder so left join orderEntry oe on so.FInterID=oe.FInterID
                 left join client c on so.FCustID=c.FItemID
