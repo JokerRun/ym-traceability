@@ -9,13 +9,43 @@ from AIS20131118110255.dbo.t_ICItem;
 
 -- 产品附件表
 drop table zj0730.dbo.HubProductAttachment;
-
 select prod.FNumber,
+       acce.FItemID,
+       acce.FTypeID,
        acce.FFileName,
        acce.FFileName as url
 into zj0730.dbo.HubProductAttachment
 from AIS20131118110255.dbo.t_icitem as prod
          LEFT JOIN AIS20131118110255.dbo.t_accessory AS acce ON prod.FItemID = acce.FItemID;
+-- 建表
+SELECT b.FFileName, b.fid, b.FUploadTime, a.FNumber, b.FItemID, b.FTypeID
+into zj0730.dbo.HubProductAttachment
+from dbo.t_ICItemCore a
+         inner join dbo.t_Accessory b on a.FItemID = B.FItemID and FTypeID = 4 and FIsPIC = 0 and FSaveMode = 0
+
+-- 加载数据
+
+SELECT b.FFileName, b.fid, b.FUploadTime, a.FNumber, b.FItemID, b.FTypeID
+from AIS20131118110255.dbo.t_ICItemCore a
+         inner join AIS20131118110255.dbo.t_Accessory b on a.FItemID = B.FItemID and FTypeID = 4 and FIsPIC = 0 and FSaveMode = 0
+union
+select FFileName, b.fid, b.FUploadTime, a.FNumber, b.FItemID, ftypeid
+from AIS20131118110255.dbo.t_ICItemCore a
+         inner join
+     (select a.fnumber, b.FFileName, b.fid, b.FUploadTime, ftypeid, b.FItemID
+      from AIS20131118110255.dbo.t_Item a
+               inner join AIS20131118110255.dbo.t_Accessory b on
+          a.fitemid = b.FItemID and a.FItemClassID = B.ftypeid
+      where FItemClassID = 3021
+        and ftypeid = 3021
+        and FIsPIC = 0
+        and FSaveMode = 0) b
+     on SubString(a.FNumber, 12, 3) = b.FNumber
+
+;
+
+
+
 
 -- 客户表
 drop table zj0730.dbo.HubCustomer;
